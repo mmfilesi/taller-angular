@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="">
+
+<head>
+    <base href="/">
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>angular 1.6 workshop</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+
+<body ng-app="app" >
+        <hello-saturn></hello-saturn>
+
+    <!-- angular -->
+    <script src="js/vendor/angular.min.js"></script>
+
+    <script>
+        angular.module('app', []);
+
+        var helloWorldConfig = {
+            template: '<div>Subcomponente</div>'
+        };
+        angular.module('app').component('helloWorld', helloWorldConfig);
+
+        angular.module('app').component('helloSaturn', {
+            template: '<div>Saturn <hello-world></hello-world></div>'
+        });
+  
+
+    </script>
+</body>
+
+
+</html>
