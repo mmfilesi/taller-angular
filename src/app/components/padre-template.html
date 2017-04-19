@@ -1,0 +1,37 @@
+<article>
+    <!-- Las propiedades y métodos del controlador se interpretan en las templates cuando van dentro del par de llaves -->
+    {{ compoPadre.foo }}
+
+    <!-- Esto no se renderizará porque la propiedad es false -->
+    <div ng-if="compoPadre.propiedadConValorFalso">
+        <p>Vaya, esto no mostrará.</p>
+    </div>
+
+    <!-- Ejemplo de ng-repeat de un array sencillo.
+    Observad que podemos poner directamente el ítem -->
+    <h3>Frutas:</h3>
+    <ul>
+        <li ng-repeat="item in compoPadre.fruits">{{item}}</li>
+    </ul>
+
+    <!-- Ejemplo de ng-repeat de un array de objetos -->
+    <h3>Planetas:</h3>
+    <ul>
+        <li ng-repeat="item in compoPadre.solarSystem">{{item.name}}</li>
+    </ul>
+
+    <!-- Eventos -->
+    <button ng-click="compoPadre.setFoo()">Cambiar la propiedad foo</button>
+
+    <!-- Un componente hijo al que le vamos a pasar tres cosas:
+        una propiedad - string (@)
+        una propiedad cuyo valor debe "interpretar" (<)
+        un método del componente padre
+    -->
+    <componente-hijo
+        propiedad-cadena = "Uka lele"
+        propiedad-interpretada = "compoPadre.bar" 
+        metodo-paterno = "compoPadre.setBar()"
+    ></componente-hijo>
+
+</article>
