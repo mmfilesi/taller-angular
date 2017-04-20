@@ -1,0 +1,22 @@
+{
+  "name": "taller-angular",
+  "version": "1.0.0",
+  "description": "taller de Angular para Vector Academy",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmfilesi/taller-angular.git"
+  },
+  "author": "mmfilesi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mmfilesi/taller-angular/issues"
+  },
+  "homepage": "https://github.com/mmfilesi/taller-angular#readme",
+  "dependencies": {
+    "angular-ui-router": "^0.4.2"
+  }
+}

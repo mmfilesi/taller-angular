@@ -1,7 +1,8 @@
-<article>
+<article class="list-animals">
     <animals-card
     ng-repeat="item in animalsList.allAnimals" 
-    item-animal="item" 
+    item-animal="item"
+    ng-click="animalsList.goToDetail()"
     >
 </animals-card>
 </article>

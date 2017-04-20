@@ -1,7 +1,51 @@
+.main-container {
+    max-width: 600px;
+    border: 1px solid green;
+    padding: 1em;
+}
+
+.view-main {
+    border: 1px solid #cc00cc;
+    padding: 1em;
+}
+
+.main-header {
+    font-size:24px;
+    text-align: center;
+    border: 1px solid red;
+}
+
+.main-footer {
+    text-align: center;
+    border: 1px solid blue;
+    margin: 0.5em;
+    padding:0.2em;
+}
+
+.list-animals {
+  padding:0.2em;
+  border: 1px solid #ff9933;
+}
+
 .list-animals-card {
-    width: 100px;
-    height: 100px;
+    width: 125px;
+    height: 125px;
     border: 1px solid #ccc;
     display: inline-block;
     margin: 0.5em;
+    padding:0.2em;
+    overflow:hidden;
+    text-align: center;
+    cursor: pointer;
+}
+
+.list-animals-card-img {
+    width:100px;
+    height: 100px;
+}
+
+.list-animals-card-title {
+    font-weight: bold;
+    margin-bottom: 0;
+    text-align: center;
 }
