@@ -1,0 +1,7 @@
+.list-animals-card {
+    width: 100px;
+    height: 100px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    margin: 0.5em;
+}

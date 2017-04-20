@@ -10,12 +10,12 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
+
+    <link rel="stylesheet" href="app/styles/main.css">
 </head>
 
 <body ng-app="app" ng-strict-di>
-    <componente-padre2></componente-padre2>   
-    <hr>
-    <componente-padre></componente-padre>
+    <view-main></view-main> 
     
     <!-- angular -->
     <script src="vendor/angular.min.js"></script>
@@ -24,13 +24,21 @@
     <script src="app/app.js"></script>
 
     <!-- servicios / factorías -->
-    <script src="app/services/demo-factory.js"></script>
+    <script src="app/services/animals-factory.js"></script>
 
     <!-- componentes -->
-    <script src="app/components/componente-padre.js"></script>
-    
-    <script src="app/components/componente-padre2.js"></script>
-    <script src="app/components/componente-hijo.js"></script>
+        <!-- pantalla main -->
+        <script src="app/components/main/view-main.js"></script>
+        <script src="app/components/main/animalsList/animals-list.js"></script>
+        <script src="app/components/main/animalsCard/animals-card.js"></script> 
+        
+        <!-- pantalla detail -->
+        <script src="app/components/detail/view-detail.js"></script>
+       
+        <!-- comunes -->
+        <script src="app/components/commons/header/header.js"></script>
+        <script src="app/components/commons/footer/footer.js"></script>
+
 
 </body>
 
