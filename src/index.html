@@ -13,7 +13,8 @@
 </head>
 
 <body ng-app="app" ng-strict-di>
-
+    <componente-padre2></componente-padre2>   
+    <hr>
     <componente-padre></componente-padre>
     
     <!-- angular -->
@@ -22,7 +23,13 @@
     <!-- our app -->
     <script src="app/app.js"></script>
 
+    <!-- servicios / factorías -->
+    <script src="app/services/demo-factory.js"></script>
+
+    <!-- componentes -->
     <script src="app/components/componente-padre.js"></script>
+    
+    <script src="app/components/componente-padre2.js"></script>
     <script src="app/components/componente-hijo.js"></script>
 
 </body>

@@ -2,7 +2,7 @@
 
   angular.module('app').component('componentePadre', {
     // otra opción es poner aquí directamente el html asignándoselo a template:
-    templateUrl: 'app/components/padre-template.html',
+    templateUrl:  'app/components/padre-template.html',
     // en controller definimos la función que escribimos abajo
     controller: controladorCompoPadre,
     // declaramos un alias para no tener que usar $ctrl.

@@ -7,4 +7,9 @@
     <p>Este botón lanza un método definido en el componente padre 
         <button ng-click="compoHijo.metodoPaterno()">cambiar bar</button>
     </p>
+
+    <ul>
+        <li ng-repeat="film in compoHijo.allFilms">
+             {{film.title}}
+        </li>
 </article>

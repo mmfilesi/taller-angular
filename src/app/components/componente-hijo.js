@@ -2,7 +2,7 @@
 
   angular.module('app').component('componenteHijo', {
     templateUrl: 'app/components/hijo-template.html',
-    controller: controladorCompoHijo,
+    controller: ['$log', 'demoFactory', controladorCompoHijo],
     controllerAs: 'compoHijo',
     bindings: {
       propiedadCadena: '@',
@@ -11,8 +11,26 @@
     }
   });
 
-  function controladorCompoHijo() {
-    /* Este controlador no tiene nada, pq toda lógica se organiza desde el padre */
+  function controladorCompoHijo($log, demoFactory) {
+   var vm = this;
+
+   console.log('soy demoFactory', demoFactory)
+
+   vm.$onInit = function() {
+     vm.allFilms = demoFactory.getAllFilms();
+     
+     $log.log('todo listo');
+   };
+
+   vm.$onChanges = function() {
+      $log.log('se ha producido un cambio');
+     };
+
+    vm.$onDestroy = function() {
+     $log.log('me voy');
+   };
+
+
   }
 
 })(angular);
