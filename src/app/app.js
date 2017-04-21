@@ -4,7 +4,9 @@
   /* Declaramos el módulo e inyectamos el router */
   // https://github.com/angular-ui/ui-router
   // npm install --save angular-ui-router
-  angular.module('app', ['ui.router']);
+  var dependenciasProyecto = ['ui.router'];
+
+  angular.module('app', dependenciasProyecto);
 
   /* Definimos la configuración del proyecto durante la fase config */
   /* Necesitamos inyectar algunos "providers" del router */
@@ -19,13 +21,22 @@
 
     var detail = {
       name: 'detail',
-      url: '/detail',
+      url: '/detail/:idAnimal',
+      params: {
+        idAnimal: { squash: true, value: null }
+      },
       template: '<view-detail></view-detail>'
     };
 
-    $stateProvider.state(main);
-    $stateProvider.state(detail)
+    var about = {
+      name:'aboutUs',
+      url: '/aboutUs',
+      template: '<h3>About Us: work in progress</h3>'
+    };
 
+    $stateProvider.state(main);
+    $stateProvider.state(detail);
+    $stateProvider.state(about);
   
     /* Definimos una ruta por defecto: */
     $urlRouterProvider.otherwise('/main');

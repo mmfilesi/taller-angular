@@ -1,8 +1,17 @@
 <article class="list-animals">
+    <!-- <p>
+        <input type="text" 
+        ng-model="animalsList.filterCriteria" 
+        ng-keypress="animalsList.filterAnimals()">
+    </p>-->
     <animals-card
     ng-repeat="item in animalsList.allAnimals" 
     item-animal="item"
-    ng-click="animalsList.goToDetail()"
+    ng-click="animalsList.goToDetail(item.id)"
     >
-</animals-card>
+    </animals-card>
+    <div>
+        <button ng-click="animalsList.sortList('up')">Up</button> - 
+        <button ng-click="animalsList.sortList('down')">Down</button
+    </div>
 </article>

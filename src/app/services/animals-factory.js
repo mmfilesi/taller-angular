@@ -6,7 +6,7 @@
     var module = {};
     var self = module;
 
-    var allAnimals = [
+   module.allAnimals = [
         {id: 0, name: 'Gatos', img:'cats.jpg'},
         {id: 1, name: 'Camaleones', img:'camaleones.jpg'},
         {id: 2, name: 'Perros', img: 'dogs.jpg'},
@@ -16,7 +16,7 @@
     ];
 
     module.getAllAnimals = function() {
-        return allAnimals;
+        return self.allAnimals;
     };
 
     return module;

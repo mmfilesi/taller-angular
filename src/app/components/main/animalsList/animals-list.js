@@ -12,12 +12,20 @@
 
     vm.$onInit = function() {
       vm.allAnimals = animalsFactory.getAllAnimals();
+      vm.currentPosition = 'up';
     };
 
     /* Al clicar sobre un elemento de la lista,
     nos vamos al detalle con el método go de $state */
-    vm.goToDetail = function() {
-      $state.go('detail');
+    vm.goToDetail = function(_idAnimal_) {
+      $state.go('detail', {idAnimal: _idAnimal_});
+    };
+
+    vm.sortList = function(_position_) {
+      if ( _position_ !== vm.currentPosition ) {
+        vm.allAnimals.reverse();
+        vm.currentPosition = _position_;
+      }
     };
   }
 
