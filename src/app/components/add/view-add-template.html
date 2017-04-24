@@ -1,5 +1,44 @@
 <article>
-    <button ng-click="viewAdd.addAnimal()">
-        Añadir
-    </button>
+    <div class="msg-error" 
+    ng-show="viewAdd.showMsg">RELLENA LOS CAMPOS!!!!</div>
+    <p>
+        <input 
+        type="text" 
+        id="animalName" 
+        ng-model="viewAdd.animalName"
+        ng-class="{ 'has-error': !viewAdd.animalName && viewAdd.formIsSend }"
+        >
+        <label for="animalName">
+            Nombre
+        </label>
+    </p>
+    <p>
+        <input 
+        type="text" 
+        id="animalImg" 
+        ng-model="viewAdd.animalImg"
+        ng-class="{ 'has-error': !viewAdd.animalImg && viewAdd.formIsSend }"
+        >
+        <label for="animalImg">
+            Imagen
+        </label>
+    </p>
+    <p>
+        <select 
+        id="animalType" 
+        ng-model="viewAdd.animalType"
+        ng-class="{ 'has-error': !viewAdd.animalType && viewAdd.formIsSend }"
+        >
+            <option value="mamiferos">Mamíferos</option>
+            <option value="aves">Aves</option>
+        </select>
+        <label for="animalType">
+            Tipo
+        </label>
+    </p> 
+    <p>
+        <button ng-click="viewAdd.addAnimal()">
+            Añadir
+        </button>
+    </p>
 </article>

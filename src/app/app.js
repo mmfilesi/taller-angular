@@ -4,7 +4,7 @@
   /* Declaramos el módulo e inyectamos el router */
   // https://github.com/angular-ui/ui-router
   // npm install --save angular-ui-router
-  var dependenciasProyecto = ['ui.router'];
+  var dependenciasProyecto = ['ui.router', 'ngAnimate'];
 
   angular.module('app', dependenciasProyecto);
 

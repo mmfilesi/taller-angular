@@ -13,6 +13,7 @@
     vm.$onInit = function() {
       vm.allAnimals = animalsFactory.getAllAnimals();
       vm.currentPosition = 'up';
+      vm.animalBuscado = 'Bacalao';
     };
 
     /* Al clicar sobre un elemento de la lista,
@@ -26,6 +27,10 @@
         vm.allAnimals.reverse();
         vm.currentPosition = _position_;
       }
+    };
+
+    vm.consolearAnimalBuscado = function() {
+      console.log('Soy el animal buscado',  vm.animalBuscado);
     };
   }
 
