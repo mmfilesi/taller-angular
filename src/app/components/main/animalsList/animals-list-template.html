@@ -1,42 +1,4 @@
 <article class="list-animals">
-    <p>
-        <input type="text" 
-        ng-model="animalsList.animalBuscado"
-        ng-keyup="animalsList.consolearAnimalBuscado()"
-        >
-        <input type="radio" 
-        ng-model="animalsList.radio"
-        value="pepito"
-        >Peputo
-        <input type="radio" 
-        ng-model="animalsList.radio"
-        value="maria"
-        >Maria
-        {{animalsList.radio}}+
-     </p>
-      <p>
-        <input type="radio" 
-        ng-model="animalsList.tipoAnimal"
-        value="Hipopótamos"
-        >Hipopótamos
-        <input type="radio" 
-        ng-model="animalsList.tipoAnimal"
-        value="Gacelas"
-        >Gacelas
-        {{animalsList.tipoAnimal}}
-    </p>
-    <p>
-        <input type="checkbox" ng-model="animalsList.spam">
-        Acepto las condiciones -> vale {{animalsList.spam}}
-    </p> 
-    <p>
-        <select ng-model="animalsList.combo" >
-            <option value="1">Soy el uno</option>
-             <option value="2">Soy el dos</option>
-            <option value="3">Soy el tres</option>          
-        </select>
-        {{animalsList.combo}}
-    </p>  
     <animals-card
     ng-repeat="item in animalsList.allAnimals" 
     item-animal="item"
@@ -45,6 +7,6 @@
     </animals-card>
     <div>
         <button ng-click="animalsList.sortList('up')">Up</button> - 
-        <button ng-click="animalsList.sortList('down')">Down</button
+        <button ng-click="animalsList.sortList('down')">Down</button>
     </div>
 </article>

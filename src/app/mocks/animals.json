@@ -1,0 +1,8 @@
+[
+    {"id": 0, "name": "Gatos", "img":"cats.jpg", "type": "mamiferos"},
+    {"id": 1, "name": "Camaleones", "img":"camaleones.jpg", "type": "mamiferos"},
+    {"id": 2, "name": "Perros", "img": "dogs.jpg", "type": "mamiferos"},
+    {"id": 3, "name": "Hipopótamos", "img": "hipo.jpg", "type": "aves"},
+    {"id": 4, "name": "Cigüeñas", "img": "ciguenas.jpg", "type": "aves"},
+    {"id": 5, "name": "Pulpos", "img": "pulpo.jpg", "type": "aves"}
+]

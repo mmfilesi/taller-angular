@@ -12,7 +12,7 @@
   /* Necesitamos inyectar algunos "providers" del router */
    angular.module('app').config(['$stateProvider', '$urlRouterProvider',  appConfig]);
 
-  function appConfig($stateProvider, $urlRouterProvider) {
+  function appConfig($stateProvider, $urlRouterProvider, $locationProvider) {
     var main = {
       name: 'main',
       url: '/main',
@@ -34,18 +34,30 @@
       template: '<h3>About Us: work in progress</h3>'
     };
 
-    var about = {
+    var add = {
       name:'addAnimal',
       url: '/addAnimal',
       template: '<view-add></view-add>'
     };
+  
+    var edit = {
+      name:'editAnimal',
+      url: '/editAnimal',
+      template: '<view-edit></view-edit>'
+    };
+  
 
     $stateProvider.state(main);
     $stateProvider.state(detail);
     $stateProvider.state(about);
-  
+    $stateProvider.state(add);
+    $stateProvider.state(edit);
+
     /* Definimos una ruta por defecto: */
     $urlRouterProvider.otherwise('/main');
+
+    /* Quitamos el hash */
+    $locationProvider.html5Mode(true);
   }
 
 })(angular);

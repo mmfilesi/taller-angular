@@ -12,8 +12,11 @@
 
     vm.$onInit = function() {
       vm.allAnimals = animalsFactory.getAllAnimals();
+     
+     /* animalsFactory.getAllAnimals().then(function(data) {
+        vm.allAnimals = data;
+     });  */
       vm.currentPosition = 'up';
-      vm.animalBuscado = 'Bacalao';
     };
 
     /* Al clicar sobre un elemento de la lista,
@@ -29,9 +32,6 @@
       }
     };
 
-    vm.consolearAnimalBuscado = function() {
-      console.log('Soy el animal buscado',  vm.animalBuscado);
-    };
   }
 
 })(angular);

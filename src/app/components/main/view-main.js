@@ -28,8 +28,12 @@
     vm.actions = {};
 
     vm.actions.goToAdd = function() {
-       $state.go('addAnimal');
-     };
+      $state.go('addAnimal');
+    };
+
+    vm.actions.goToEdit = function() {
+      $state.go('editAnimal');
+    };
   }
 
  

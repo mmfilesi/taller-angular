@@ -1,0 +1,53 @@
+<article>
+    <p>
+        <h5>Seleccionar animal</h5>
+        <select ng-model="viewEdit.animalSelected" ng-change="viewEdit.editAnimal()">
+            <option ng-repeat="item in viewEdit.allAnimals" value="{{item.id}}">{{item.name}}</option>
+        </select> 
+    </p>
+
+    <!-- otra forma más elegante con ngOptions
+    https://docs.angularjs.org/api/ng/directive/ngOptions
+    <select ng-model="viewEdit.animalSelected" ng-options="item.name for item in viewEdit.allAnimals track by item.id">
+    </select> 
+    -->
+
+    <!-- Panel de edición -->
+    <div ng-show="viewEdit.editPanelShow">
+        <h5>Editar datos</h5>
+            <p>
+                <input 
+                type="text" 
+                id="animalName" 
+                ng-model="viewEdit.animalName">                
+                <label for="animalName">
+                    Nombre
+                </label>
+            </p>
+            <p>
+                <input 
+                type="text" 
+                id="animalImg" 
+                ng-model="viewEdit.animalImg">
+                <label for="animalImg">
+                    Imagen
+                </label>
+            </p>
+            <p>
+                <select 
+                id="animalType" 
+                ng-model="viewEdit.animalType">
+                    <option value="mamiferos">Mamíferos</option>
+                    <option value="aves">Aves</option>
+                </select>
+                <label for="animalType">
+                    Tipo
+                </label>
+            </p> 
+            <p>
+                <button ng-click="viewEdit.addAnimal()">
+                   Editar
+                </button>
+            </p>
+    </div>
+</article>

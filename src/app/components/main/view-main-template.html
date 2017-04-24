@@ -2,10 +2,10 @@
      <!-- Si queremos qeu sean dos clases, le pasamos un array -->
      <h3 ng-class="[viewMain.subtitulares, viewMain.subtitularesConFondo]">Listado de animales</h3>
      
-     <p ng-class="{ 'miClaseMaravillosa': viewMain.foo && viewMain.ukaLele === 'trololo' }">Lore Ipsum</p>
-    
-    <p ng-class="{ 'miClaseMaravillosa': viewMain.renders.calculaClaseMaravillosa() }">Otra cosa</p>
     <animals-list></animals-list>
     
-    <p><button ng-click="viewMain.actions.goToAdd()">Añadir animal</button></p>    
+    <p>
+        <button ng-click="viewMain.actions.goToAdd()">Añadir animal</button> -    
+        <button ng-click="viewMain.actions.goToEdit()">Editar animal</button>
+    </p>  
 </section>

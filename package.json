@@ -18,5 +18,10 @@
   "homepage": "https://github.com/mmfilesi/taller-angular#readme",
   "dependencies": {
     "angular-ui-router": "^0.4.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.18.8",
+    "eslint": "^3.19.0",
+    "gulp": "^3.9.1"
   }
 }

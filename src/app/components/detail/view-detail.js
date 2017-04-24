@@ -8,11 +8,11 @@
 
   function viewDetail($stateParams, animalsFactory) {
     var vm = this;
-
+ 
     vm.$onInit = function() {
-      var idAnimal = $stateParams.idAnimal;
-
-      vm.animalDetail = animalsFactory.getAnimalById(idAnimal)
+      var idAnimal = $stateParams.idAnimal; 
+ 
+      vm.animalDetail = animalsFactory.getAnimalById(idAnimal); 
       
     };
   }
