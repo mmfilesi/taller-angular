@@ -34,6 +34,12 @@
       template: '<h3>About Us: work in progress</h3>'
     };
 
+    var about = {
+      name:'addAnimal',
+      url: '/addAnimal',
+      template: '<view-add></view-add>'
+    };
+
     $stateProvider.state(main);
     $stateProvider.state(detail);
     $stateProvider.state(about);

@@ -2,16 +2,18 @@
 
   angular.module('app').component('viewDetail', {
     templateUrl:  'app/components/detail/view-detail-template.html',
-    controller: ['$stateParams', viewDetail],
+    controller: ['$stateParams', 'animalsFactory', viewDetail],
     controllerAs: 'viewDetail'
   });
 
-  function viewDetail($stateParams) {
+  function viewDetail($stateParams, animalsFactory) {
     var vm = this;
 
     vm.$onInit = function() {
       var idAnimal = $stateParams.idAnimal;
-      console.log('El id del animal buscado es: ', idAnimal)
+
+      vm.animalDetail = animalsFactory.getAnimalById(idAnimal)
+      
     };
   }
 

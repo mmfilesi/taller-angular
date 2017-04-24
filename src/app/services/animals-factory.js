@@ -19,6 +19,26 @@
         return self.allAnimals;
     };
 
+    module.getAnimalById = function(_id_) {
+      var len = self.allAnimals.length;
+      var id = parseInt(_id_);
+
+      if ( !id ) {
+        return false;
+      }
+
+      while ( len-- ) {
+        if ( self.allAnimals[len].id === id ) {
+          return self.allAnimals[len];
+        }
+      }
+    };
+
+    module.addAnimal = function(newAnimal) {
+      newAnimal.id = self.allAnimals.length;
+      self.allAnimals.push(newAnimal);
+    };
+
     return module;
   };
 
